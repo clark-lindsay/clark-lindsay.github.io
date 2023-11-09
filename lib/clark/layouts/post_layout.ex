@@ -1,30 +1,27 @@
 defmodule Clark.Layouts.PostLayout do
   use Clark.Component
-  use Tableau.Layout
+  use Tableau.Layout, layout: Clark.Layouts.RootLayout
 
   def template(assigns) do
     temple do
-      "<!DOCTYPE html>"
+      div class: "container mx-auto px-2" do
+        article class: "mx-auto max-w-4xl mb-8 pt-8" do
+          div class: "flex items-center justify-between" do
+            h1 class: "font-bold text-2xl" do
+              @page.title
+            end
 
-      html lang: "en" do
-        head do
-          meta charset: "utf-8"
-          meta http_equiv: "X-UA-Compatible", content: "IE=edge"
-          meta name: "viewport", content: "width=device-width, initial-scale=1.0"
+            div do
+              Calendar.strftime(@page.date, "%04Y-%02m-%02d")
+            end
+          end
 
-          link rel: "stylesheet", href: "/css/site.css"
-        end
+          hr(class: "mt-4 mb-8")
 
-        body do
-          main class: "container mx-auto px-2" do
-            h2 class: "text-lg font-semibold", do: @page.title
-
+          div class:
+                    "prose dark:prose-invert prose-a:text-purple-500 hover:prose-a:text-purple-700" do
             render(@inner_content)
           end
-        end
-
-        if Mix.env() == :dev do
-          c &Tableau.live_reload/1
         end
       end
     end

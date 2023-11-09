@@ -39,6 +39,10 @@ config :tableau, Tableau.PostExtension,
   enabled: true,
   future: true
 
+config :tableau, Tableau.PageExtension,
+  enabled: true,
+  permalink: "/pages/:title"
+
 config :tableau, Tableau.RSSExtension,
   enabled: true,
   title: "Clark Lindsay",

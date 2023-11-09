@@ -17,9 +17,21 @@ defmodule Clark.Layouts.RootLayout do
 
         body class: "font-sans" do
           div id: "the-universe" do
-            header class: "top-0 sticky z-10 w-full bg-white dark:bg-zinc-900 mx-auto p-2 border-b-2 border-zinc-950 dark:border-white" do
-              h1 class: "text-xl font-semibold", do: "clark lindsay"
-              a href: "/about", class: "text-zinc-950 dark:text-white hover:underline", do: "about"
+            header class:
+                     "top-0 sticky z-10 w-full bg-white dark:bg-zinc-900 mx-auto p-2 border-b-2 border-zinc-950 dark:border-white" do
+              h1 class: "text-xl font-semibold" do
+                a(
+                  href: "/",
+                  class: "text-zinc-950 dark:text-white hover:underline",
+                  do: "clark lindsay"
+                )
+              end
+
+              a(
+                href: "/about",
+                class: "text-zinc-950 dark:text-white hover:underline",
+                do: "about"
+              )
             end
 
             main class: "h-full mx-auto px-2 py-2" do
@@ -37,7 +49,7 @@ defmodule Clark.Layouts.RootLayout do
     end
   end
 
-  def footer(assigns) do
+  def footer(_assigns) do
     temple do
       footer class: "container py-4 px-4 border-t-2 border-zinc-950 dark:border-white w-full" do
         div do

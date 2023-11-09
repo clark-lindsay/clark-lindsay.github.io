@@ -9,3 +9,46 @@
   grid-template-rows: auto 1fr auto;
   grid-template-columns: 100%;
 }
+
+.anchor {
+  text-decoration-line: none;
+}
+
+.anchor:hover {
+  text-decoration-line: underline;
+}
+
+.anchor:after {
+  text-decoration-line: none;
+  content: "# ";
+}
+
+footer ul {
+  @apply list-none m-0 p-0;
+}
+
+footer li {
+  @apply m-0 p-0;
+}
+
+ul {
+  @apply list-disc mb-4;
+}
+
+li {
+  @apply pl-4;
+}
+
+pre {
+  @apply p-2 rounded border border-black;
+}
+
+@media (prefers-color-scheme: dark) {
+  pre {
+    @apply p-2 rounded border border-white !text-white;
+  }
+}
+
+pre {
+  @apply overflow-x-auto;
+}
