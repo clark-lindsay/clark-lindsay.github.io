@@ -1,4 +1,5 @@
 defmodule Clark.Layouts.RootLayout do
+  @moduledoc false
   use Clark.Component
   use Tableau.Layout
 
@@ -51,38 +52,53 @@ defmodule Clark.Layouts.RootLayout do
 
   def footer(_assigns) do
     temple do
-      footer class: "container py-4 px-4 border-t-2 border-zinc-950 dark:border-white w-full" do
-        div do
-          h4(class: "text-lg font-medium mb-2", do: "Site")
+      footer class: "py-4 px-4 border-t-2 border-zinc-950 dark:border-white w-full" do
+        div class:
+              "container px-2 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 5xl:grid-cols-4 gap-x-16 gap-y-8" do
+          div do
+            h4(class: "text-lg font-medium mb-2", do: "Links")
 
-          ul do
-            li do
-              a href: "/feed.xml", class: "text-zinc-950 dark:text-white hover:underline" do
-                "RSS"
+            ul do
+              li do
+                a href: "https://github.com/clark-lindsay", class: "text-zinc-950 dark:text-white hover:underline" do
+                  "github"
+                end
               end
             end
+          end
 
-            li do
-              a href: "https://github.com/clark-lindsay/clark-lindsay.github.io",
-                class: "text-zinc-950 dark:text-white hover:underline" do
-                "Source Code"
+          div do
+            h4(class: "text-lg font-medium mb-2", do: "Site")
+
+            ul do
+              li do
+                a href: "/feed.xml", class: "text-zinc-950 dark:text-white hover:underline" do
+                  "RSS"
+                end
               end
-            end
 
-            li class: "italic text-sm mt-2" do
-              span(do: "Built with")
+              li do
+                a href: "https://github.com/clark-lindsay/clark-lindsay.github.io",
+                  class: "text-zinc-950 dark:text-white hover:underline" do
+                  "Source Code"
+                end
+              end
 
-              a(
-                class: "underline",
-                href: "https://github.com/elixir-tools/tableau",
-                do: "Tableau,"
-              )
+              li class: "italic text-sm mt-2" do
+                span(do: "Built with")
 
-              a(
-                class: "underline",
-                href: "https://tailwindcss.com",
-                do: "TailwindCSS,"
-              )
+                a(
+                  class: "underline",
+                  href: "https://github.com/elixir-tools/tableau",
+                  do: "Tableau,"
+                )
+
+                a(
+                  class: "underline",
+                  href: "https://tailwindcss.com",
+                  do: "TailwindCSS,"
+                )
+              end
             end
           end
         end
