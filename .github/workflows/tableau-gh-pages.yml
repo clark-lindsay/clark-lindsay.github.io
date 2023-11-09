@@ -92,7 +92,7 @@ jobs:
 
     # Step: Execute the build
     - name: Build static site
-      run: mix tableau.build
+      run: mix build
 
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
