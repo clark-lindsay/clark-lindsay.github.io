@@ -19,7 +19,7 @@ defmodule Clark.Layouts.PostLayout do
           hr(class: "mt-4 mb-8")
 
           div class:
-                    "prose dark:prose-invert prose-a:text-purple-500 hover:prose-a:text-purple-700" do
+                "prose dark:prose-invert prose-a:text-purple-500 hover:prose-a:text-purple-700" do
             render(@inner_content)
           end
         end
