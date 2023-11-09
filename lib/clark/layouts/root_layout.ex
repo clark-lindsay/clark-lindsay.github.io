@@ -60,7 +60,8 @@ defmodule Clark.Layouts.RootLayout do
 
             ul do
               li do
-                a href: "https://github.com/clark-lindsay", class: "text-zinc-950 dark:text-white hover:underline" do
+                a href: "https://github.com/clark-lindsay",
+                  class: "text-zinc-950 dark:text-white hover:underline" do
                   "github"
                 end
               end
