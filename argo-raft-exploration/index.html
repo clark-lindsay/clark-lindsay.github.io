@@ -1,17 +1,33 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-<channel>
-  <atom:link href="https://www.clark-lindsay.github.io/feed.xml" rel="self" type="application/rss+xml" />
-  <title>Clark Lindsay</title>
-  <link>https://www.clark-lindsay.github.io</link>
-  <description>An engineer with opinions, and maybe some ideas, maybe even about software.</description>
-  <language>en-us</language>
-  <generator>Tableau v0.11.1</generator>
-    <item>
-       <title>Argo: An exploration of the Raft protocol</title>
-       <link>https://https://www.clark-lindsay.github.io/argo-raft-exploration</link>
-       <pubDate>Wed, 15 Nov 2023 15:00:00 EST</pubDate>
-       <guid>http://https://www.clark-lindsay.github.io/argo-raft-exploration</guid>
-       <description><![CDATA[ <p>I (sort of) implemented Raft. If you just want to check that out, it's <a href="https://github.com/clark-lindsay/argo/tree/main">here</a>. What follows is why and how I ended up doing that, and some opinions on how to build understanding.</p>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/site.css">
+
+  </head>
+
+  <body class="font-sans">
+    <div id="the-universe">
+      <header class="top-0 sticky z-10 w-full bg-white dark:bg-zinc-900 mx-auto p-2 border-b-2 border-zinc-950 dark:border-white">
+        <h1 class="text-xl font-semibold">
+          <a href="/" class="text-zinc-950 dark:text-white hover:underline">clark lindsay</a>
+
+        </h1>
+
+        <a href="/about" class="text-zinc-950 dark:text-white hover:underline">about</a>
+
+      </header>
+
+      <main class="h-full mx-auto px-2 py-2">
+        <div class="container mx-auto px-2"><article class="mx-auto max-w-4xl mb-8 pt-8"><div class="flex items-center justify-between"><h1 class="font-bold text-2xl">Argo: An exploration of the Raft protocol</h1>
+
+<div>2023-11-15</div>
+</div>
+
+<hr class="mt-4 mb-8">
+<div class="prose dark:prose-invert prose-a:text-purple-500 hover:prose-a:text-purple-700"><p>I (sort of) implemented Raft. If you just want to check that out, it's <a href="https://github.com/clark-lindsay/argo/tree/main">here</a>. What follows is why and how I ended up doing that, and some opinions on how to build understanding.</p>
 <h2><a href="#wait-i-know-that-name" aria-hidden="true" class="anchor" id="wait-i-know-that-name"></a>Wait, I know that name</h2>
 <p>A few weeks ago I saw a <a href="https://www.youtube.com/watch?v=vYp4LYbnnW8">lecture video</a> pop up in my YouTube recommendations (yes, I'm serious -- I watch a lot of conference talks there) about the <a href="https://raft.github.io/">Raft consensus algorithm</a>. I might have scrolled past it after my experience trying to grok <a href="https://en.wikipedia.org/wiki/Paxos_(computer_science)">Paxos</a>, but I did a double take when I saw that the lecturer was <a href="https://web.stanford.edu/~ouster/cgi-bin/home.php">John Ousterhout</a>, whose book <a href="https://web.stanford.edu/~ouster/cgi-bin/aposd.php">A Philosophy of Software Design</a> was very impactful on my views of, er, software design. I highly recommend it.</p>
 <p>So I click into the video and start watching it and I quickly realize that Ousterhout is one of the co-authors of Raft alongside his PhD student <a href="https://ongardie.net/">Diego Ongaro</a>. Not sure how I hadn't made that connection before, but it helps that I had never read the paper. Well, now I'm invested. I had heard of the protocol and had seen enough buzz about it to know that it was <em>neat</em>, but I hadn't looked into it because I tend to build up massive lists of technical topics that I usually prioritize incorrectly. I think I'm getting better at that. I hope, anyway.</p>
@@ -44,17 +60,70 @@
 <p>For one thing: how Raft works. That's the big box: <em>checked</em>. But I also learned, or really <em>re-proved to myself</em>, the value of building understanding from first principles and practice. Writing out and testing the logic for something like Raft's &quot;heartbeats&quot;, even with the aforementioned corner-cutting, is a huge leap in understanding from my first read of the paper, despite the highlighter in my hand that assured me that I signalled the important pieces to my brain.</p>
 <p>Got to write some OTP and some property-based testing on the way too, and that's always satisfying.</p>
 <p>Now I think I'm moving on to learning more about event streaming and messages queues, à la <a href="https://kafka.apache.org/#:~:text=Apache%20Kafka%20is%20an%20open,%2C%20and%20mission%2Dcritical%20applications.">kafka</a> and <a href="https://www.rabbitmq.com/">RabbitMQ</a>, plus I've got to prep for D&amp;D.</p>
- ]]></description>
-    </item>
-    <item>
-       <title>Hello world</title>
-       <link>https://https://www.clark-lindsay.github.io/hello-world</link>
-       <pubDate>Wed, 08 Nov 2023 19:00:00 EST</pubDate>
-       <guid>http://https://www.clark-lindsay.github.io/hello-world</guid>
-       <description><![CDATA[ <p>Hello and welcome to my little corner of the internet.</p>
-<p>Expect posts primarily about software (I think, anyway) but also about bicycles, coffee, tabletop RPGs, gaming, and maybe some computer builds.</p>
-<p>I'm currently working on an exploratory, absolutely-not-intended-for-production implementation of the <a href="https://raft.github.io/">Raft protocol</a> in Elixir. So hopefully I'll write a post about that once enough of it is working.</p>
- ]]></description>
-    </item>
-  </channel>
-</rss>
+</div>
+</article>
+</div>
+
+
+      </main>
+
+    </div>
+
+<footer class="py-4 px-4 border-t-2 border-zinc-950 dark:border-white w-full">
+  <div class="container px-2 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 5xl:grid-cols-4 gap-x-16 gap-y-8">
+    <div>
+      <h4 class="text-lg font-medium mb-2">Links</h4>
+
+      <ul>
+        <li>
+          <a href="https://github.com/clark-lindsay" class="text-zinc-950 dark:text-white hover:underline">
+            github
+          </a>
+
+        </li>
+
+      </ul>
+
+    </div>
+
+    <div>
+      <h4 class="text-lg font-medium mb-2">Site</h4>
+
+      <ul>
+        <li>
+          <a href="/feed.xml" class="text-zinc-950 dark:text-white hover:underline">
+            RSS
+          </a>
+
+        </li>
+
+        <li>
+          <a href="https://github.com/clark-lindsay/clark-lindsay.github.io" class="text-zinc-950 dark:text-white hover:underline">
+            Source Code
+          </a>
+
+        </li>
+
+        <li class="italic text-sm mt-2">
+          <span>Built with</span>
+
+          <a class="underline" href="https://github.com/elixir-tools/tableau">Tableau,</a>
+
+          <a class="underline" href="https://tailwindcss.com">TailwindCSS,</a>
+
+        </li>
+
+      </ul>
+
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+
+</html>
+
