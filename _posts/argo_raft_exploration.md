@@ -1,7 +1,7 @@
 ---
 title: "Argo: An exploration of the Raft protocol"
 permalink: "/argo-raft-exploration"
-date: "~N[2023-11-15 19:00:00]"
+date: "~N[2023-11-15 15:00:00]"
 layout: "Clark.Layouts.PostLayout"
 ---
 
