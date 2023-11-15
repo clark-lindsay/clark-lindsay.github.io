@@ -1,0 +1,20 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <atom:link href="https://www.clark-lindsay.github.io/feed.xml" rel="self" type="application/rss+xml" />
+  <title>Clark Lindsay</title>
+  <link>https://www.clark-lindsay.github.io</link>
+  <description>An engineer with opinions, and maybe some ideas, maybe even about software.</description>
+  <language>en-us</language>
+  <generator>Tableau v0.11.1</generator>
+    <item>
+       <title>Hello world</title>
+       <link>https://https://www.clark-lindsay.github.io/hello-world</link>
+       <pubDate>Wed, 08 Nov 2023 19:00:00 EST</pubDate>
+       <guid>http://https://www.clark-lindsay.github.io/hello-world</guid>
+       <description><![CDATA[ <p>Hello and welcome to my little corner of the internet.</p>
+<p>Expect posts primarily about software (I think, anyway) but also about bicycles, coffee, tabletop RPGs, gaming, and maybe some computer builds.</p>
+<p>I'm currently working on an exploratory, absolutely-not-intended-for-production implementation of the <a href="https://raft.github.io/">Raft protocol</a> in Elixir. So hopefully I'll write a post about that once enough of it is working.</p>
+ ]]></description>
+    </item>
+  </channel>
+</rss>
